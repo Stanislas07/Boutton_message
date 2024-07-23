@@ -1,15 +1,14 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 
 root = Tk()
-frm = ttk.Frame(root, padding=10)
-frm.grid()
 
 def on_button_click():
-    frm = ttk.Frame(root, padding=10)
+    messagebox.showinfo(title="message",message="Vous avez réussi !")
     
 
-ttk.Label(frm, text="Vous avez réussi !").grid(column=0, row=0)
-ttk.Button(frm, texte="Click me", commande = on_button_click).grid(column=1, row=0)
+
+ttk.Button(root, text="Click me", command = on_button_click).grid(column=1, row=0)
 
 root.mainloop()
